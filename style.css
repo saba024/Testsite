@@ -60,7 +60,7 @@ header
     display: inline-block;
     width: 32px;
     height: 32px;
-    background-image: url("/Users/saba/SplitwiseClone/img/united-kingdom.svg");
+    background-image: url("./united-kingdom.svg");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -105,11 +105,11 @@ header
 }
 
 .ru:before{
-	background-image: url("/Users/saba/SplitwiseClone/img/russia.svg");
+	background-image: url("./russia.svg");
 }
 
 .gb:before{
-	background-image: url("/Users/saba/SplitwiseClone/img/united-kingdom.svg");
+	background-image: url("./united-kingdom.svg");
 }
 
 .lang-menu:hover ul{
