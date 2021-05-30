@@ -145,7 +145,7 @@ function loadData(){
         div_right.className = "vi_right"
         let img_person = document.createElement("img")
         
-        img_person.src = "/img/person.png"
+        img_person.src = "./person.png"
 
         let p_title = document.createElement("p")
         p_title.className = 'title'

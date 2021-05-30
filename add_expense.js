@@ -241,7 +241,7 @@ function setle_debt(ind){
 	localStorage.setItem("budget_income", JSON.stringify(budget_income));
 	localStorage.setItem("budget_expenses", JSON.stringify(budget_expenses));
 	localStorage.setItem("members", JSON.stringify(members));
-
+	window.location.href = "./main.html"
 }
 
 function delete_member(index){
