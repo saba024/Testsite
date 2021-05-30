@@ -52,11 +52,11 @@ function loadData(){
     	let img_category = document.createElement("img")
     	
     	if (expense.category == "Food"){
-    		img_category.src = "/img/food.jpg"
+    		img_category.src = "./food.jpg"
     	}
 
     	else{
-    		img_category.src = "/img/house.jpg"	
+    		img_category.src = "./house.jpg"	
     	}
 
     	let p = document.createElement("p")
@@ -78,7 +78,7 @@ function loadData(){
     	   img_receipt.src = ""
         }
         else{
-            img_receipt.src = "/img/receipt.jpg"
+            img_receipt.src = "./receipt.jpg"
         }
         button_receipt.appendChild(img_receipt)
     	let content_text = document.createElement("p")
@@ -98,7 +98,7 @@ function loadData(){
         button_delete.setAttribute("onClick", "delete_expense(this.id)")
 
         let img_pers = document.createElement("img")
-        img_pers.src = "/img/person.png"
+        img_pers.src = "./person.png"
         let p_activity = document.createElement("p")
         p_activity.className = "title"
         p_activity.textContent = expense.who_paid + " added expense for " + expense.concept + '($' + expense.amount + ')'
@@ -187,11 +187,11 @@ function loadData(){
         let current_user = JSON.parse(localStorage.getItem("current_user"))
         
         if (member.name == current_user) {
-            img_person.src = "/Users/saba/SplitwiseClone/img/me.png"
+            img_person.src = "./me.png"
         }
 
         else{
-            img_person.src = "/img/person.png"
+            img_person.src = "./person.png"
         }
 
         let p_title = document.createElement("p")
@@ -260,10 +260,10 @@ function template_expenses(){
 
     let expenses = []
 
-    let new_expense = new Expense(0, "Bob", 30, "Burger", "Food", ["Bill", "Greg"], "/img/receipt.jpg");
+    let new_expense = new Expense(0, "Bob", 30, "Burger", "Food", ["Bill", "Greg"], "./receipt.jpg");
     expenses.push(new_expense);
 
-    new_expense = new Expense(1, "Greg", 50, "Rent", "House", ["Bill"], "/img/receipt.jpg");
+    new_expense = new Expense(1, "Greg", 50, "Rent", "House", ["Bill"], "./receipt.jpg");
     expenses.push(new_expense);
 
     return expenses

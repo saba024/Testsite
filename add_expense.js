@@ -65,7 +65,7 @@ function add_expense(){
   	let getFileUrl = JSON.parse(localStorage.getItem("uploadedUrl"));
   	let receipt = getFileUrl
     if(getFileUrl === ""){
-    	receipt = "/img/receipt"
+    	receipt = "./receipt"
     	console.log("file is empty")
     }else {
         receipt = getFileUrl
@@ -126,7 +126,7 @@ function add_expense(){
 	localStorage.setItem("budget_income", JSON.stringify(budget_income));
   	localStorage.setItem("budget_expenses", JSON.stringify(budget_expenses));
   	localStorage.setItem("edit_id", JSON.stringify(""));
-  	window.location.href = "/main.html"
+  	window.location.href = "./main.html"
 }
 
 let save_image_button = document.getElementById("add_file")
@@ -188,7 +188,7 @@ function delete_expense(ind){
 	localStorage.setItem("budget_income", JSON.stringify(budget_income));
 	localStorage.setItem("budget_expenses", JSON.stringify(budget_expenses));
 	localStorage.setItem("members", JSON.stringify(members));
-	window.location.href = "/main.html"
+	window.location.href = "./main.html"
 }
 
 function add_member(){
@@ -200,7 +200,7 @@ function add_member(){
 	let new_member = new Member(id_member, member, 0, 0)
 	members.push(new_member)
 	localStorage.setItem("members", JSON.stringify(members));
-	window.location.href = "/main.html"
+	window.location.href = "./main.html"
 }
 
 function setle_debt(ind){
