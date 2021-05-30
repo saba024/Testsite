@@ -46,76 +46,14 @@ header
 
 }
 
-
-.selected-lang{
-	display: flex;   
-    justify-content: space-between;
-    line-height: 2;
-    cursor: pointer;
-
+.lang-menu .btn{
+	background-color: cornsilk;
+	border: none;
 }
 
-.selected-lang:before{
-	content: '';
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    background-image: url("./united-kingdom.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
+.lang-menu .btn:hover{
+	background-color: #e6b8b8; 
 }
-
-.lang-menu ul{
-	margin: 0;
-	padding: 0;
-	background-color: #fff;
-	border: 1px solid #f8f8f8;
-	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-	border-radius: 5px;
-	display: none;
-	
-}
-
-.lang-menu ul li{
-	list-style: none;
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-}
-
-.lang-menu ul li a{
-	text-decoration: none;
-    width: 125px;
-    padding: 5px 10px;
-    display: block;
-}
-
-.lang-menu ul li a:before{
-	content: '';
-	display: inline-block;
-	width:32px;
-	height: 32px;
-	margin-right: 10px;
-	vertical-align: middle;
-	
-}
-
-.lang-menu ul li a:hover{
-	background-color: #f2f2f2;
-}
-
-.ru:before{
-	background-image: url("./russia.svg");
-}
-
-.gb:before{
-	background-image: url("./united-kingdom.svg");
-}
-
-.lang-menu:hover ul{
-	display: block;
-}
-
 
 
 body {
@@ -181,21 +119,27 @@ body {
 
 .budget-income-title,
 .budget-expenses-title {
-    float: left;
     font-size: 13px;
     color: #444;
     margin-top: 2px;
 }
 
-.budget-income-value,
-.budget-expenses-value {
+.budget-income-value{
+	position: absolute;
+	right: 10px;
+	top: 60%;
     letter-spacing: 1px;
-    float: left;
+}
+
+.budget-expenses-value {
+	position: absolute;
+	right: 10px;
+	top: 85%;
+    letter-spacing: 1px;
 }
 
 .budget-income-percentage,
 .budget-expenses-percentage {
-    float: left;
     width: 34px;
     font-size: 11px;
     padding: 3px 0;
@@ -232,6 +176,7 @@ body {
     color: #013220;
     text-decoration: none;
     font-family: cursive;
+    font-size: 16px;
 }
 
 .tab_name, .tab_name2, .tab_name3, .tab_name4{
@@ -379,7 +324,7 @@ body {
 }
 
 
-.view_item .amount, .expense_amount{
+.view_item .amount, .expense_amount, .neg_amount{
 	position: absolute;
 	right: 0;
 	width: 150px;
@@ -389,7 +334,11 @@ body {
 	font-family: bold;
 }
 
-.vi_right img{
+.view_item .neg_amount{
+	color: red;
+}
+
+.vi_right .img{
 	position: absolute;
 	right: 5%;
 	width: 50px;
@@ -478,16 +427,22 @@ body {
 	position: relative;
 	background-color: white;
 	width: 30%;
-	height: 30%;
+	height: 40%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: column;
-	margin: 5px;
+	margin: 1px;
 }
 
 .split_modal .title{
 	font-size: 16px;
+}
+
+.split_modal .save {
+	position: absolute;
+	top: 90%;
+	left: 1px;
 }
 
 
@@ -633,6 +588,20 @@ body {
 	left: 10px;
 }
 
+.modal .button_file{
+	position: absolute;
+	top: 77%;
+	right: 100px;
+	background-color: blue; /* Green */
+	border: none;
+	color: white;
+	padding: 7px 15px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 12px;
+	cursor: pointer;
+}
+
 
 
 .member_modal h2{
@@ -744,6 +713,7 @@ body {
 	text-decoration: none;
 	font-size: 12px;
 }
+
 
 
 
